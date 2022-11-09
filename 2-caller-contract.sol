@@ -24,15 +24,15 @@ contract MainContract {
     // example interfaceName(address).functionName
    
     function getBalance() external view returns(uint) {
-        return IdataCalleeContractInterface(IdataCalleeContractAddress).getBalance();
+        return IdataCalleeContractInterface(dataCalleeContractAddress).getBalance();
   }
 
     function getName() external pure returns(uint) {
-        return IdataCalleeContractInterface(IdataCalleeContractAddress).getName();
+        return IdataCalleeContractInterface(dataCalleeContractAddress).getName();
   }
   
     function getTruck() external pure returns(string memory) {
-        return IdataCalleeContractInterface(IdataCalleeContractAddress).getTruck();
+        return IdataCalleeContractInterface(dataCalleeContractAddress).getTruck();
   } 
   
     function getTruck2() external pure returns(string memory) {
