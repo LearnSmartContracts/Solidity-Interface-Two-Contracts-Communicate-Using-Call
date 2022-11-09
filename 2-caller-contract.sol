@@ -27,7 +27,7 @@ contract MainContract {
         return IdataCalleeContractInterface(dataCalleeContractAddress).getBalance();
   }
 
-    function getName() external pure returns(uint) {
+    function getName() external pure returns(string memory) {
         return IdataCalleeContractInterface(dataCalleeContractAddress).getName();
   }
   
