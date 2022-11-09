@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.6;
 
-contract InfoCalleeContract {
+contract dataCalleeContract {
 
 // One of these built in functions has to be present to receive funds.  I added them so a balance can be called and displayed by the Interface in the caller-contract.sol
   receive( ) external payable {}
