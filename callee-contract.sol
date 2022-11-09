@@ -3,8 +3,7 @@ pragma solidity ^0.8.6;
 
 contract CalleeContract {
 
-// One of these built in functions has to be present to receive funds.  I added them so a balance 
-can be called and displayed by the Interface in the caller-contract.sol
+// One of these built in functions has to be present to receive funds.  I added them so a balance can be called and displayed by the Interface in the caller-contract.sol
   receive( ) external payable {}
   fallback( ) external payable {}
 
