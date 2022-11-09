@@ -36,6 +36,6 @@ contract MainContract {
   } 
   
     function getTruck2() external pure returns(string memory) {
-        return IdataCalleeContractInterface(IdataCalleeContractAddress).getTruck2();
+        return IdataCalleeContractInterface(dataCalleeContractAddress).getTruck2();
   }
 }
