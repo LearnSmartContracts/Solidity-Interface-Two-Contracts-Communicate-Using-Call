@@ -13,10 +13,6 @@ can be called and displayed by the Interface in the caller-contract.sol
       return address (this).balance; 
       } 
   
-  function getHeight() external pure returns(uint) {
-    return 6;
-  }
-  
   function getName() external pure returns(string memory) {
     return 'Jim';
   }
