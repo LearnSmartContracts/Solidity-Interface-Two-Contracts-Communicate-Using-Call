@@ -4,7 +4,7 @@ pragma solidity ^0.8.9;
 //defined interface with functions that do not contain an implementation
 //declared as type external
 
-interface IDataCalleeContractInterface {
+interface IdataCalleeContractInterface {
   function getBalance() external view returns(uint);
   function getName() external pure returns(string memory);
   function getTruck() external pure returns(string memory);
@@ -14,9 +14,9 @@ interface IDataCalleeContractInterface {
 
 contract MainContract {
     
-    // state variable that represents the address of the callee contract.  can find it on etherscan or remix deployed contracts
+    // state variable that represents the address of the data callee contract.  can find it on etherscan or remix deployed contracts
     
-    address private constant CalleeContractAddress = PASTECALLEECONTRACTADDRESSHERE;
+    address private constant dataCalleeContractAddress = PASTECALLEECONTRACTADDRESSHERE;
     
     
     // to access the functions in the data contract
@@ -24,18 +24,18 @@ contract MainContract {
     // example interfaceName(address).functionName
    
     function getBalance() external view returns(uint) {
-        return ICallerContractInterface(CallerContractInterface).getBalance();
+        return IdataCalleeContractInterface(IdataCalleeContractAddress).getBalance();
   }
 
     function getName() external pure returns(uint) {
-        return ICallerContractInterface(CallerContractInterface).getName();
+        return IdataCalleeContractInterface(IdataCalleeContractAddress).getName();
   }
   
     function getTruck() external pure returns(string memory) {
-        return ICallerContractInterface(CallerContractInterface).getTruck();
+        return IdataCalleeContractInterface(IdataCalleeContractAddress).getTruck();
   } 
   
     function getTruck2() external pure returns(string memory) {
-        return IDataContractInterface(DataContractAddress).getTruck2();
+        return IdataCalleeContractInterface(IdataCalleeContractAddress).getTruck2();
   }
 }
