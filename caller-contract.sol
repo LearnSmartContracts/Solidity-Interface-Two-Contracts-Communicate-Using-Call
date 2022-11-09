@@ -4,20 +4,19 @@ pragma solidity ^0.8.9;
 //defined interface with functions that do not contain an implementation
 //declared as type external
 
-interface IDataContractInterface {
+interface ICallerContractInterface {
   function getBalance() external view returns(uint);
-  function getAge() external pure returns(uint);
-  function getHeight() external pure returns(uint);
   function getName() external pure returns(string memory);
-  function getCar() external pure returns(string memory);
+  function getTruck() external pure returns(string memory);
+  function getTruck2() external pure returns(string memory);/
 }
 
 
 contract MainContract {
     
-    // state variable called DataContractAddress that represents the address of the data contract
+    // state variable that represents the address of the callee contract
     
-    address private constant DataContractAddress = PASTECALLEECONTRACTADDRESSHERE;
+    address private constant CalleeContractAddress = PASTECALLEECONTRACTADDRESSHERE;
     
     
     // to access the functions in the data contract
@@ -25,22 +24,18 @@ contract MainContract {
     // example interfaceName(address).functionName
    
     function getBalance() external view returns(uint) {
-        return IDataContractInterface(DataContractAddress).getBalance();
+        return ICallerContractInterface(CallerContractInterface).getBalance();
   }
 
-    function getAge() external pure returns(uint) {
-        return IDataContractInterface(DataContractAddress).getAge();
+    function getName() external pure returns(uint) {
+        return ICallerContractInterface(CallerContractInterface).getName();
   }
   
-    function getHeight() external pure returns(uint) {
-        return IDataContractInterface(DataContractAddress).getHeight();
-  }
-  
-    function getName() external pure returns(string memory) {
-        return IDataContractInterface(DataContractAddress).getName();
+    function getTruck() external pure returns(string memory) {
+        return ICallerContractInterface(CallerContractInterface).getTruck();
   } 
   
-    function getCar() external pure returns(string memory) {
-        return IDataContractInterface(DataContractAddress).getCar();
+    function getTruck2() external pure returns(string memory) {
+        return IDataContractInterface(DataContractAddress).getTruck2();
   }
 }
