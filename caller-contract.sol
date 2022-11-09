@@ -4,7 +4,7 @@ pragma solidity ^0.8.9;
 //defined interface with functions that do not contain an implementation
 //declared as type external
 
-interface ICallerContractInterface {
+interface IDataCalleeContractInterface {
   function getBalance() external view returns(uint);
   function getName() external pure returns(string memory);
   function getTruck() external pure returns(string memory);
