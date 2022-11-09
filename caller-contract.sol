@@ -8,13 +8,13 @@ interface ICallerContractInterface {
   function getBalance() external view returns(uint);
   function getName() external pure returns(string memory);
   function getTruck() external pure returns(string memory);
-  function getTruck2() external pure returns(string memory);/
+  function getTruck2() external pure returns(string memory);
 }
 
 
 contract MainContract {
     
-    // state variable that represents the address of the callee contract
+    // state variable that represents the address of the callee contract.  can find it on etherscan or remix deployed contracts
     
     address private constant CalleeContractAddress = PASTECALLEECONTRACTADDRESSHERE;
     
